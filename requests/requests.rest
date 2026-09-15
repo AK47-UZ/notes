@@ -6,8 +6,8 @@ POST http://localhost:3001/api/notes
 Content-Type: application/json
 
 {
- "content":"security is nice to learn",
- "important": false
+ "content":"This is a big data ",
+ "important": true
 }
 
 
