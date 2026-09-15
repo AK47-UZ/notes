@@ -10,6 +10,8 @@ console.log('---')
 next()
  }
 
+ app.use(express.static('dist'))
+
 app.use(requestLogger)
  app.use(express.json())
  app.use(cors())
