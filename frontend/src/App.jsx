@@ -77,8 +77,8 @@ console.log("CHANGED NOTE :", changedNote);
     setNewNote("");
   })
   .catch((error) => {
-    setErrorMessage(error.response?.data?.error);
-    setTimeout(() => {
+console.log("MESSAGE ERREUR :", error.response?.data?.error);
+setErrorMessage(error.response?.data?.error);    setTimeout(() => {
       setErrorMessage(null);
     }, 5000);
   });
