@@ -34,16 +34,17 @@ const App = () => {
     });
   }, []);*/
   useEffect(() => {
-  console.log("TEST USEEFFECT");
+  console.log("effect");
 
   noteService.getAll().then((initialNotes) => {
-    console.log("TEST NOTES :", initialNotes);
+    console.log("NOTES REÇUES DU BACKEND :", initialNotes);
+    setNotes(initialNotes);
   });
 }, []);
   if (!notes) {
-      return null;
-    }
-  console.log("render", notes.length, "notes");
+  return <div>Chargement...</div>;
+}
+  console.log("RENDER NOTES :", notes);
   const toggleImportanceOf = (id) => {
     console.log("ID reçu :", id);
     const note = notes.find((n) => n.id === id);
